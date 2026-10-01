@@ -2,9 +2,11 @@
 
 Page web qui affiche tout ce qu’un site peut savoir sur un visiteur avec JavaScript, sans cookie et sans rien lui demander.
 
+**Voir le site en ligne : <https://benoit-cicd.github.io/qui-suis-je/>**
+
 Le site est statique (HTML, CSS et JavaScript, sans dépendance ni étape de build).
 
-## Lancer
+## Lancer en local
 
 Certaines API (Client Hints, `navigator.storage`, DRM…) ne fonctionnent qu’en contexte sécurisé (`https://` ou `localhost`).
 Il faut donc servir le dossier plutôt qu’ouvrir le fichier directement :
