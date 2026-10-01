@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tout ce qu’un site web peut savoir sur vous grâce à JavaScript : IP, localisation, navigateur, écran, matériel, empreinte numérique…">
+  <meta name="color-scheme" content="light dark">
+  <title>Qui suis-je ?</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Transparence · Vie privée</p>
+      <h1>Voici ce que n’importe quel site peut savoir sur vous</h1>
+      <p class="lede">
+        Sans cookie, sans compte, sans rien vous demander : uniquement avec JavaScript et quelques requêtes réseau.
+        <span id="stats">Collecte en cours…</span>
+      </p>
+
+      <div class="tiles" id="tiles">
+        <article class="tile" data-tile="ip"><h2>Adresse IP</h2><p class="main">…</p><p class="sub"></p></article>
+        <article class="tile" data-tile="place"><h2>Localisation estimée</h2><p class="main">…</p><p class="sub"></p></article>
+        <article class="tile" data-tile="device"><h2>Appareil</h2><p class="main">…</p><p class="sub"></p></article>
+        <article class="tile" data-tile="screen"><h2>Écran</h2><p class="main">…</p><p class="sub"></p></article>
+        <article class="tile" data-tile="tz"><h2>Fuseau horaire</h2><p class="main">…</p><p class="sub"></p></article>
+        <article class="tile accent" data-tile="fp"><h2>Votre empreinte</h2><p class="main mono">…</p><p class="sub"></p></article>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="btn-gps" type="button">📍 Révéler ma position précise</button>
+        <button class="btn ghost" id="btn-export" type="button">⬇️ Exporter en JSON</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc" id="toc" aria-label="Sections"></nav>
+
+  <main class="wrap grid" id="sections"></main>
+
+  <footer class="wrap footer">
+    <p>
+      Tout est calculé dans votre navigateur et rien n’est enregistré. Seules exceptions, nécessaires pour connaître
+      votre IP : des requêtes vers <code>ipapi.co</code> / <code>get.geojs.io</code> / <code>ipwho.is</code> et <code>ipify.org</code>,
+      un serveur STUN de Google (WebRTC), la carte OpenStreetMap et une requête « appât » vers un domaine publicitaire
+      pour détecter les bloqueurs.
+    </p>
+    <p>Ce que vous voyez ici, les régies publicitaires et les traqueurs le voient aussi — et le combinent pour vous reconnaître.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
